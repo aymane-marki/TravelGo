@@ -202,6 +202,9 @@
   .h-\[45vh\] {
     height: 45vh;
   }
+  .h-\[60\%\] {
+    height: 60%;
+  }
   .h-\[60vh\] {
     height: 60vh;
   }
@@ -228,6 +231,9 @@
   }
   .transform {
     transform: var(--tw-rotate-x, ) var(--tw-rotate-y, ) var(--tw-rotate-z, ) var(--tw-skew-x, ) var(--tw-skew-y, );
+  }
+  .cursor-pointer {
+    cursor: pointer;
   }
   .resize {
     resize: both;
@@ -347,14 +353,32 @@
   .px-3\.5 {
     padding-inline: calc(var(--spacing) * 3.5);
   }
+  .px-\[1\] {
+    padding-inline: 1;
+  }
+  .px-\[1re\] {
+    padding-inline: 1re;
+  }
   .px-\[1rem\] {
     padding-inline: 1rem;
   }
   .px-\[2rem\] {
     padding-inline: 2rem;
   }
+  .px-\[2vh\] {
+    padding-inline: 2vh;
+  }
+  .px-\[2vw\] {
+    padding-inline: 2vw;
+  }
   .px-\[4rem\] {
     padding-inline: 4rem;
+  }
+  .px-\[5\] {
+    padding-inline: 5;
+  }
+  .px-\[5vw\] {
+    padding-inline: 5vw;
   }
   .px-\[7rem\] {
     padding-inline: 7rem;
@@ -362,11 +386,29 @@
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
   }
+  .py-\[1\.5vh\] {
+    padding-block: 1.5vh;
+  }
   .py-\[1rem\] {
     padding-block: 1rem;
   }
+  .py-\[1vh\] {
+    padding-block: 1vh;
+  }
+  .py-\[2r\] {
+    padding-block: 2r;
+  }
   .py-\[2rem\] {
     padding-block: 2rem;
+  }
+  .py-\[2rvh\] {
+    padding-block: 2rvh;
+  }
+  .py-\[2vh\] {
+    padding-block: 2vh;
+  }
+  .py-\[vh\] {
+    padding-block: vh;
   }
   .pr-\[6rem\] {
     padding-right: 6rem;
@@ -385,6 +427,9 @@
   }
   .pl-\[7rem\] {
     padding-left: 7rem;
+  }
+  .pl-\[7vw\] {
+    padding-left: 7vw;
   }
   .pl-\[rem\] {
     padding-left: rem;
