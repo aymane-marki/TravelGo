@@ -15,11 +15,16 @@
     --color-amber-300: oklch(87.9% 0.169 91.605);
     --color-amber-500: oklch(76.9% 0.188 70.08);
     --color-amber-950: oklch(27.9% 0.077 45.635);
+    --color-gray-400: oklch(70.7% 0.022 261.325);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
+    --text-xs: 0.75rem;
+    --text-xs--line-height: calc(1 / 0.75);
     --text-xl: 1.25rem;
     --text-xl--line-height: calc(1.75 / 1.25);
+    --text-2xl: 1.5rem;
+    --text-2xl--line-height: calc(2 / 1.5);
     --text-4xl: 2.25rem;
     --text-4xl--line-height: calc(2.5 / 2.25);
     --text-6xl: 3.75rem;
@@ -28,6 +33,8 @@
     --text-8xl--line-height: 1;
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
+    --font-weight-extrabold: 800;
+    --radius-2xl: 1rem;
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
@@ -192,6 +199,9 @@
   .h-\[40vh\] {
     height: 40vh;
   }
+  .h-\[45vh\] {
+    height: 45vh;
+  }
   .h-\[60vh\] {
     height: 60vh;
   }
@@ -206,6 +216,9 @@
   }
   .w-\[200px\] {
     width: 200px;
+  }
+  .w-fit {
+    width: fit-content;
   }
   .w-full {
     width: 100%;
@@ -234,11 +247,20 @@
   .gap-0 {
     gap: 0px;
   }
+  .gap-3 {
+    gap: calc(var(--spacing) * 3);
+  }
+  .gap-6 {
+    gap: calc(var(--spacing) * 6);
+  }
   .gap-\[1rem\] {
     gap: 1rem;
   }
   .gap-\[2rem\] {
     gap: 2rem;
+  }
+  .rounded-2xl {
+    border-radius: var(--radius-2xl);
   }
   .rounded-\[5px\] {
     border-radius: 5px;
@@ -316,6 +338,15 @@
   .bg-no-repeat {
     background-repeat: no-repeat;
   }
+  .object-cover {
+    object-fit: cover;
+  }
+  .px-3 {
+    padding-inline: calc(var(--spacing) * 3);
+  }
+  .px-3\.5 {
+    padding-inline: calc(var(--spacing) * 3.5);
+  }
   .px-\[1rem\] {
     padding-inline: 1rem;
   }
@@ -327,6 +358,9 @@
   }
   .px-\[7rem\] {
     padding-inline: 7rem;
+  }
+  .py-2 {
+    padding-block: calc(var(--spacing) * 2);
   }
   .py-\[1rem\] {
     padding-block: 1rem;
@@ -361,6 +395,10 @@
   .font-\[\'arial\'\] {
     font-family: 'arial';
   }
+  .text-2xl {
+    font-size: var(--text-2xl);
+    line-height: var(--tw-leading, var(--text-2xl--line-height));
+  }
   .text-4xl {
     font-size: var(--text-4xl);
     line-height: var(--tw-leading, var(--text-4xl--line-height));
@@ -376,6 +414,13 @@
   .text-xl {
     font-size: var(--text-xl);
     line-height: var(--tw-leading, var(--text-xl--line-height));
+  }
+  .text-xs {
+    font-size: var(--text-xs);
+    line-height: var(--tw-leading, var(--text-xs--line-height));
+  }
+  .text-\[10px\] {
+    font-size: 10px;
   }
   .text-\[40px\] {
     font-size: 40px;
@@ -404,9 +449,17 @@
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
   }
+  .font-extrabold {
+    --tw-font-weight: var(--font-weight-extrabold);
+    font-weight: var(--font-weight-extrabold);
+  }
   .font-semibold {
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
+  }
+  .tracking-\[3px\] {
+    --tw-tracking: 3px;
+    letter-spacing: 3px;
   }
   .text-amber-300 {
     color: var(--color-amber-300);
@@ -416,6 +469,12 @@
   }
   .text-amber-950 {
     color: var(--color-amber-950);
+  }
+  .text-black {
+    color: var(--color-black);
+  }
+  .text-gray-400 {
+    color: var(--color-gray-400);
   }
   .text-orange-300 {
     color: var(--color-orange-300);
@@ -481,6 +540,10 @@
   inherits: false;
 }
 @property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-tracking {
   syntax: "*";
   inherits: false;
 }
@@ -553,6 +616,7 @@
       --tw-border-style: solid;
       --tw-leading: initial;
       --tw-font-weight: initial;
+      --tw-tracking: initial;
       --tw-outline-style: solid;
       --tw-blur: initial;
       --tw-brightness: initial;
