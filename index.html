@@ -6,8 +6,35 @@
     <title>Document</title>
     <link rel="stylesheet" href="./public/css/output.css">
 </head>
-<body>
-    <h1 class="text-red-800 "> hello world</h1>
-    
+<body class="font-['Arial',sans-serif'] capitalize">
+    <!-- header -->
+    <header class="flex justify-between items-center px-[7rem] py-[2rem]">
+        <div class="">
+            <p class="text-[40px] font-bold uppercase">travel<span class="text-orange-500">go.</span></p>
+        </div>
+
+        <nav class=" flex gap-[2rem] font-semibold">
+            <a href="">home</a>
+            <a href="">destination</a>
+            <a href="">about</a>
+            <a href="">contact</a>
+        </nav>
+
+        <div>
+            <button class="bg-orange-500 text-white px-[2rem] py-[1rem] rounded-[8px]">book now</button>
+        </div>
+    </header>
+    <!-- main -->
+    <main>
+        <!-- first section -->
+        <section class="bg-[url(/public/images/images.png)] w-full h-[60vh] bg-no-repeat bg-cover bg-center">
+            <div class="w-full h-full bg-black/50 flex flex-col justify-center pl-[7rem] gap-[1rem]">
+                <span class="text-orange-300">discover the world</span>
+                <h1 class="text-white text-6xl font-bold w-[40%] leading-16">explore the world with <span class="text-orange-500">travelgo</span></h1>
+                <p class="text-white">discover amazing places experience new cultures and create unforgettable memories</p>
+                <button class="text-white">explore destination</button>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
